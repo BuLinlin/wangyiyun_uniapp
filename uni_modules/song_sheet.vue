@@ -201,6 +201,7 @@
 <style lang="less" scoped>
 	.bigbox {
 		padding: 5%;
+		padding-bottom: 0;
 		display: flex;
 		flex-direction: column;
 
