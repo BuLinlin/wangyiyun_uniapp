@@ -16,6 +16,8 @@
 		<!-- 推荐歌单 -->
 		<songlist></songlist>
 		<view class="van-hairline--top"></view>
+		<!-- 推荐歌曲 -->
+		<myrecomlist></myrecomlist>
 	</view>
 </template>
 
@@ -24,12 +26,14 @@
 	import mybanner from '@/uni_modules/banner.vue'
 	import mylist from '@/uni_modules/list.vue'
 	import songlist from "@/uni_modules/song_sheet.vue"
+	import myrecomlist from "@/uni_modules/Recommended_Songs.vue"
 	export default {
 		components: {
 			myheader,
 			mybanner,
 			mylist,
-			songlist
+			songlist,
+			myrecomlist
 		},
 		data() {
 			return {
