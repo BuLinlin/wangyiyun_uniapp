@@ -16,7 +16,6 @@
 		<!-- 推荐歌单 -->
 		<songlist></songlist>
 		<view class="van-hairline--top"></view>
-		111
 	</view>
 </template>
 
