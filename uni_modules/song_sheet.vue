@@ -13,6 +13,7 @@
 								<image :src="item.picUrl" mode="scaleToFill"
 									style="width: 240rpx; height: 240rpx;border-radius: 20rpx;vertical-align:middle;margin-bottom: 10rpx;">
 								</image>
+								<van-icon class="ico" color="#fff" name="fire" />
 								<span class="van-multi-ellipsis--l2">{{item.name}}</span>
 							</view>
 						</swiper-item>
@@ -23,6 +24,10 @@
 						<image :src="item2.picUrl" mode="scaleToFill"
 							style="width: 240rpx; height: 240rpx;border-radius: 20rpx;vertical-align:middle;margin-bottom: 10rpx;">
 						</image>
+						<view class="ico">
+							<van-icon color="#fff" name="play" />
+							<span style="color: #fff;font-size: 24rpx;:font-weight: bold;">{{formatNum(item2.playCount)}}</span>
+						</view>
 						<span class="van-multi-ellipsis--l2">{{item2.name}}</span>
 					</view>
 				</view>
@@ -190,8 +195,17 @@
 				const res = await this.$myRequest({
 					url: "/personalized"
 				})
-				this.imgs2 = res.data.result
+				this.imgs2 = res.data.result.slice(5,20)
+				this.imgs = res.data.result.slice(0,4)
 			}
+		},
+		computed:{
+			formatNum() {
+			      return function(num) {
+			        if (num > 10000&&num < 100000000) return (num / 10000).toFixed(2) + '万';
+					if (num>100000000) return (num/100000000).toFixed(2) + '亿';
+			      };
+			    }
 		}
 	}
 </script>
@@ -213,6 +227,12 @@
 
 				.one {
 					width: 35%;
+					position: relative;
+					.ico{
+					position: absolute;
+						top: 5%;
+						right: 5%;
+					}
 				}
 
 				.two {
@@ -220,7 +240,15 @@
 					display: flex;
 
 					.recommend2 {
+						position: relative;
 						margin-left: 50rpx;
+						.ico{
+							position: absolute;
+							top: 5%;
+							right: 5%;
+							display: flex;
+							align-items: center;
+						}
 					}
 				}
 			}

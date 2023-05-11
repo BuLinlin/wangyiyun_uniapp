@@ -19,8 +19,8 @@
 		<!-- 推荐歌曲 -->
 		<myrecomlist></myrecomlist>
 		<view class="van-hairline--top"></view>
-		<!-- 排行榜 -->
-		12333
+		<!-- 电台推荐 -->
+		<myradio></myradio>
 	</view>
 </template>
 
@@ -30,13 +30,15 @@
 	import mylist from '@/uni_modules/list.vue'
 	import songlist from "@/uni_modules/song_sheet.vue"
 	import myrecomlist from "@/uni_modules/Recommended_Songs.vue"
+	import myradio from "@/uni_modules/radio_station.vue"
 	export default {
 		components: {
 			myheader,
 			mybanner,
 			mylist,
 			songlist,
-			myrecomlist
+			myrecomlist,
+			myradio
 		},
 		data() {
 			return {
