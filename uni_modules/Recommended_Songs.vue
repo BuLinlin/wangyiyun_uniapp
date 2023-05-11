@@ -1,14 +1,14 @@
 <template>
 	<view class="bigbox">
 		<view class="onebox">
-			<span>推荐新音乐<van-icon name="arrow" /></span>
+			<span style="font-size: 33rpx;font-weight: bold;">推荐新音乐<van-icon name="arrow" /></span>
 		</view>
 		<view class="twobox">
-			<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
+			<swiper :indicator-dots="flase" :autoplay="flase" :interval="3000" :duration="1000"  style="height: 400rpx;">
 				<swiper-item v-for="(item,index) in grouped" :key="grouped.index">
 					<view class="swiper-item"" v-for="list in item" :key="list.id">
-						<image :src="list.picUrl" mode=""></image>
-						<span>{{list.copywriter}}</span>
+						<image :src="list.picUrl" mode="" style="width: 100rpx;height: 100rpx;border-radius: 20rpx;"></image>
+						<span style="width: 80%;">{{list.copywriter}}</span>
 					</view>
 				</swiper-item>
 			</swiper>
@@ -135,12 +135,19 @@
 <style lang="less" scoped>
 	.bigbox {
 		padding: 5%;
-		padding-top: 0;
 		display: flex;
 		flex-direction: column;
 
 		.onebox {
 			margin-bottom: 30rpx;
+		}
+		.twobox{
+			.swiper-item{
+				display: flex;
+				margin-bottom: 2%;
+				justify-content: space-between;
+				align-items: center;
+			}
 		}
 	}
 </style>

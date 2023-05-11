@@ -1,20 +1,19 @@
 <template>
 	<view class="bigbox">
 		<view class="onebox">
-			<span>推荐歌单<van-icon name="arrow" /></span>
+			<span style="font-size: 33rpx;font-weight: bold;">推荐歌单<van-icon name="arrow" /></span>
 		</view>
 		<view class="card">
 			<view class="recommend">
 				<view class="one">
 					<swiper :indicator-dots="false" :autoplay="true" :interval="3000" :duration="1000" vertical="true"
-						circular="true">
-						<swiper-item v-for="item in imgs" :key="item.id" @touchmove.stop="" height="auto">
+						circular="true" style="height: 350rpx;">
+						<swiper-item v-for="item in imgs" :key="item.id" @touchmove.stop="">
 							<view class="swiper-item">
 								<image :src="item.picUrl" mode="scaleToFill"
 									style="width: 240rpx; height: 240rpx;border-radius: 20rpx;vertical-align:middle;margin-bottom: 10rpx;">
 								</image>
-								<span class="van-multi-ellipsis--l2"
-									style="font-size: 14rpx;font-weight: bold;line-height: 24rpx;">{{item.name}}</span>
+								<span class="van-multi-ellipsis--l2">{{item.name}}</span>
 							</view>
 						</swiper-item>
 					</swiper>
@@ -24,8 +23,7 @@
 						<image :src="item2.picUrl" mode="scaleToFill"
 							style="width: 240rpx; height: 240rpx;border-radius: 20rpx;vertical-align:middle;margin-bottom: 10rpx;">
 						</image>
-						<span class="van-multi-ellipsis--l2"
-							style="font-size: 14rpx;font-weight: bold;line-height: 24rpx;">{{item2.name}}</span>
+						<span class="van-multi-ellipsis--l2">{{item2.name}}</span>
 					</view>
 				</view>
 			</view>
@@ -201,7 +199,6 @@
 <style lang="less" scoped>
 	.bigbox {
 		padding: 5%;
-		padding-bottom: 0;
 		display: flex;
 		flex-direction: column;
 

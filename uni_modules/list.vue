@@ -1,8 +1,8 @@
 <template>
 	<view class="list">
 		<view class="litbox" v-for="item in imgs" :key="item.id">
-			<image style="background-color:rgb(220, 47, 39);width: 70rpx;height: 70rpx; border-radius: 50%;margin-bottom: 20rpx;" :src="item.iconUrl" mode=""></image>
-			<view style="width: 100%;text-align: center;white-space:nowrap;font-size: 14rpx;">{{item.name}}</view>
+			<image style="background-color:rgb(220, 47, 39);width: 100rpx;height: 100rpx; border-radius: 50%;margin-bottom: 20rpx;" :src="item.iconUrl" mode=""></image>
+			<view style="width: 100%;text-align: center;white-space:nowrap;">{{item.name}}</view>
 		</view>
 	</view>
 </template>
