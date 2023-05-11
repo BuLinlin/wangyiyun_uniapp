@@ -18,6 +18,9 @@
 		<view class="van-hairline--top"></view>
 		<!-- 推荐歌曲 -->
 		<myrecomlist></myrecomlist>
+		<view class="van-hairline--top"></view>
+		<!-- 排行榜 -->
+		12333
 	</view>
 </template>
 

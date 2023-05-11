@@ -4,7 +4,7 @@
 			<span style="font-size: 33rpx;font-weight: bold;">推荐新音乐<van-icon name="arrow" /></span>
 		</view>
 		<view class="twobox">
-			<swiper :indicator-dots="flase" :autoplay="flase" :interval="3000" :duration="1000"  style="height: 400rpx;">
+			<swiper :indicator-dots="flase" :autoplay="flase" :interval="3000" :duration="1000"  style="height: 350rpx;">
 				<swiper-item v-for="(item,index) in grouped" :key="grouped.index">
 					<view class="swiper-item"" v-for="list in item" :key="list.id">
 						<image :src="list.picUrl" mode="" style="width: 100rpx;height: 100rpx;border-radius: 20rpx;"></image>
@@ -126,9 +126,18 @@
 		},
 		mounted() {
 			// 从后端获取数据并存储到list数组中
-			// ...
+			this.getrecomlist()
 			console.log(this.grouped)
 		},
+		methods:{
+			async getrecomlist(){
+				const res = await this.$myRequest({
+					url:"/personalized/privatecontent/list?limit=9"
+				})
+				console.log(res.data.result)
+				this.list = res.data.result
+			}
+		}
 		}
 </script>
 
@@ -144,7 +153,7 @@
 		.twobox{
 			.swiper-item{
 				display: flex;
-				margin-bottom: 2%;
+				margin-bottom: 3%;
 				justify-content: space-between;
 				align-items: center;
 			}

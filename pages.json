@@ -27,7 +27,8 @@
 			"van-nav-bar": "wxcomponents/@vant/weapp/nav-bar/index",
 			"van-icon": "wxcomponents/@vant/weapp/icon/index",
 			"van-image": "wxcomponents/@vant/weapp/image/index",
-			"van-tag": "wxcomponents/@vant/weapp/tag/index"
+			"van-tag": "wxcomponents/@vant/weapp/tag/index",
+			"van-sticky": "wxcomponents/@vant/weapp/sticky/index"
 		}
 	},
 	"tabBar": {

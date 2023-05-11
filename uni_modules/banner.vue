@@ -3,7 +3,7 @@
 		<swiper class="swiper" circular indicator-dots="true" :autoplay="autoplay" :interval="interval"
 			:duration="duration">
 			<swiper-item v-for="item in imgs" :key="item.index">
-				<image :src="item.pic" mode="" style="width: 100%; height: 100%;"></image>
+				<image :src="item.pic" mode="" style="width: 100%; height: 100%;border-radius: 20rpx;"></image>
 			</swiper-item>
 		</swiper>
 	</view>
@@ -37,6 +37,7 @@
 
 <style lang="less" scoped>
 	.uni-margin-wrap {
-		margin-top: 80rpx;
+		margin-top: 15%;
+		padding: 0 5% ;
 	}
 </style>
