@@ -63,4 +63,7 @@
 </script>
 
 <style lang="less" scoped>
+	.content{
+		background-color: rgb(245, 245, 245);
+	}
 </style>

@@ -15,8 +15,8 @@
 			return {
 				imgs: [{
 					pic: 'http://p1.music.126.net/Wn2rUBaIjzgRNZAw3jO4nQ==/109951168600686089.jpg'
-				},{
-					pic:'http://p1.music.126.net/h3d-bmC_eNVaJZogMhqH4w==/109951168600644471.jpg'
+				}, {
+					pic: 'http://p1.music.126.net/h3d-bmC_eNVaJZogMhqH4w==/109951168600644471.jpg'
 				}]
 			}
 		},
@@ -38,6 +38,6 @@
 <style lang="less" scoped>
 	.uni-margin-wrap {
 		margin-top: 15%;
-		padding: 0 5% ;
+		padding: 0 5%;
 	}
 </style>

@@ -6,7 +6,7 @@
 		<view class="twobox">
 			<view class="litbox" v-for="item in radio" :key="item.id">
 				<image :src="item.picUrl" mode="" style="width: 600rpx;height: 300rpx;border-radius: 20rpx;"></image>
-				<van-icon class="ico" name="live" size="50" color="#fff"/>
+				<van-icon class="ico" name="live" size="50" color="#fff" />
 				<view class="card">
 					<span>{{item.rcmdtext}}</span>
 				</view>
@@ -171,31 +171,48 @@
 					},
 				]
 			}
+		},
+		mounted() {
+			this.getradiolist()
+		},
+		methods: {
+			async getradiolist() {
+				const res = await this.$myRequest({
+					url: "/dj/recommend"
+				})
+				this.radio = res.data.djRadios
+				console.log(this.radio)
+			}
 		}
 	}
 </script>
 
 <style lang="less" scoped>
-	.bigbox{
+	.bigbox {
 		padding: 5%;
 		display: flex;
 		flex-direction: column;
+
 		.onebox {
 			margin-bottom: 30rpx;
 		}
-		.twobox{
+
+		.twobox {
 			display: flex;
 			overflow: auto;
-			.litbox{
+
+			.litbox {
 				position: relative;
 				margin-left: 2%;
-				.ico{
+
+				.ico {
 					position: absolute;
 					left: 50%;
 					top: 50%;
-					transform: translate(-50%,-50%);
+					transform: translate(-50%, -50%);
 				}
-				.card{
+
+				.card {
 					box-sizing: border-box;
 					width: 600rpx;
 					overflow: hidden;
@@ -205,7 +222,7 @@
 					color: #fff;
 					border-bottom-left-radius: 20rpx;
 					border-bottom-right-radius: 20rpx;
-					white-space:nowrap;
+					white-space: nowrap;
 					text-overflow: ellipsis;
 					background-color: rgba(0, 0, 0, 0.5);
 				}

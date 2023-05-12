@@ -1,24 +1,25 @@
 <template>
 	<view class="bigbox">
-		<view class="toux">
-			<view class="xinxi">
-				<image src="../../static/logo.png" mode=""
-					style="width: 100rpx;height: 100rpx;border-radius: 100%;margin-right: 10px;"></image>
-				<span>海鲜兔子</span>
-			</view>
-			<van-icon size="35rpx" name="setting" />
-		</view>
-		<!-- 会员卡 -->
-		<view class="card">
-			<view class="member">
-				<view class="myicon">
-					<van-icon name="gem" size="25px" />
-					<span>海鲜会员</span>
+		<view class="onebox">
+			<!-- 头像 -->
+			<image src="@/static/logo.png" mode=""
+				style="position:absolute;top:-25%;width:100rpx;height: 100rpx; border-radius: 50%;"></image>
+			<!-- 用户名与vip -->
+			<view class="information">
+				<span class="sp1" style="font-size: 33rpx;font-weight: bold;">海鲜兔子</span>
+				<view class="nameplate">
+					<van-tag type="danger" round>svip</van-tag>
 				</view>
-				<span>哪里都是靓丽的风景线</span>
 			</view>
-			<view class="pay">
-				<span>成为会员</span>
+			<!-- 关注人数/粉丝数/用户等级 -->
+			<view class="grade">
+				<span>6关注</span>
+				<!-- 分割线 -->
+				<view class="segmentation"> </view>
+				<span>1粉丝</span>
+				<!-- 分割线 -->
+				<view class="segmentation"> </view>
+				<span>LV.6</span>
 			</view>
 		</view>
 	</view>
@@ -39,59 +40,50 @@
 
 <style lang="less" scoped>
 	.bigbox {
-		padding: 30rpx;
-
-		.toux {
+		padding: 5%;
+		background-color: rgb(245, 245, 245);
+		min-height: 100vh;
+		.onebox {
+			margin-top: 10%;
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
-			margin-bottom: 30rpx;
+			justify-content: center;
+			flex-direction: column;
+			background-color: #fff;
+			height: auto;
+			border-radius: 20rpx;
+			box-shadow: 0 0 200rpx 2rpx rgba(0, 0, 0, 0.1);
+			position: relative;
 
-			.xinxi {
+			.information {
+				margin-top: 10%;
 				display: flex;
+				width: 33%;
+				justify-content: space-around;
 				align-items: center;
-			}
-		}
 
-		.card {
-			height: 150rpx;
-			width: 100%;
-			background: repeating-linear-gradient(to right, #d81406, #dc4035);
-			border-radius: 10rpx;
-			display: flex;
-			justify-content: space-between;
-			color: #fff;
-			align-items: center;
-
-			.member {
-				margin-left: 30rpx;
-
-				span {
-					font-size: 12rpx;
+				.sp1 {
+					white-space: nowrap;
 				}
 
-				.myicon {
-					font-weight: bold;
-					display: flex;
-					align-items: center;
-
-					span {
-						font-size: 24rpx;
-					}
+				.nameplate {
+					font-size: 14rpx;
 				}
 			}
-
-			.pay {
-				width: 120rpx;
-				height: 25%;
-				margin-right: 30rpx;
-				border: #fff solid;
-				border-radius: 25rpx;
-				text-align: center;
+			.grade{
+				font-size: 22rpx;
 				display: flex;
+				color: #868686;
+				margin-top: 2%;
+				width: 33%;
+				justify-content: space-around;
 				align-items: center;
-				justify-content: center;
-				font-size: 16rpx;
+				margin-bottom: 5%;
+				.segmentation{
+					width: 3rpx;
+					height: 20rpx;
+					background-color: #868686;
+				}
 			}
 		}
 	}

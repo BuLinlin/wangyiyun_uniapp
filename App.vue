@@ -15,6 +15,9 @@
 <style>
 	@import 'wxcomponents/@vant/weapp/common/index.wxss';
 	/*每个页面公共css */
+	body{
+		background-color: rgb(245, 245, 245);
+	}
 	::-webkit-scrollbar {
 	  display: none; /* Chrome Safari */}
 .van-nav-bar__content{
