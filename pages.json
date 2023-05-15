@@ -13,7 +13,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/Daily_push/Daily_push",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "梦见猫的音乐",

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<van-nav-bar :title="title"  left-arrow fixed :left-arrow="back" @click-left="handleBack">
+		<van-nav-bar :title="title" left-arrow fixed :left-arrow="back" @click-left="handleBack">
 			<template v-if="!back" #left>
 				<slot name="left" />
 			</template>
@@ -16,7 +16,15 @@
 
 <script>
 	export default {
-		props: ['back'],
+		props: {
+			back:{
+				type:Boolean,
+				dafault:true
+			},
+			title:{
+				type:String,
+			}
+		},
 		data() {
 			return {
 
